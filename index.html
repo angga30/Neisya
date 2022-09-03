@@ -1,0 +1,156 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css"><script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+<style>
+    @keyframes leaves {0% {transform: scale(1);} 100% {transform: scale(.90);}} .image .degdeg{animation: leaves 1s ease-in-out infinite alternate;-webkit-animation: leaves 1s ease-in-out infinite alternate;}
+body{transition:all .3s ease;background-color:#000;font-family: 'Shippori Antique', sans-serif;padding: 15px}body::before{content:"";color:white;opacity:.8;font-size:13px;position:absolute;bottom:25px;left:calc(50vw - 72px);} a{text-decoration:none;}
+#bodyblur{display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:2;transition:all 1s ease;opacity:0;visibility:hidden;-webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px);}
+
+#fotoloveu{opacity:0;width:100%;height:100px;transition:all 1s ease;}
+#fotoloveu > *{font-weight:400;font-size:15px;text-align:center;text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);color:white;margin-bottom:20px;display:flex;align-items:center;justify-content:center;}
+#fotoloveu img{transition:all .3s ease;}
+
+.catatan{position:relative;opacity:0;padding:16px 50px 16px 50px; text-align:center;line-height: 200%;text-shadow: 0px 2px 2px rgba(0, 0, 0, .8);background:rgba(0, 0, 0, 0.6);color:white; font-size:1rem;line-height:1.6em;border-radius:10px;overflow:hidden;transition:all 1s ease;}
+#spasi::before{content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0"}
+
+#tombWA{position:relative;opacity:0;visibility:hidden;transition:all .3s ease;display:flex;justify-content:center;align-items:center;list-style:none}
+.button{margin-top:20px;display:inline-flex;align-items:center;padding:5px 8px;outline:0;border:0; border-radius:5px;line-height:20px; color:#fefefe;background:rgba(0, 0, 0, .5);font-size:13px;white-space:nowrap;overflow:hidden;max-width:100%} .button:hover{opacity:.4;}
+
+#konten{z-index:3;position:relative;top:-50px;transition:all 1s ease;}
+
+.fa-heart {opacity:.5;color:#fff;font-size: 30px;width:18px;height:18px;position: absolute;animation:  heartMove linear 1;top: -10vh;z-index: 4;}
+@keyframes heartMoves {0%{transform: translateY(-10vh) ;} 100%{transform: translateY(100vh) ;}}
+</style>
+<head>
+</head>
+<body>
+<style>
+body{background-image: url("https://i.postimg.cc/pLd7XMrW/wallpaper.jpg");background-repeat: no-repeat;background-size: 100% 100% 100%;}
+</style><div id="bodyblur"></div>
+
+<div id="konten"><div id="fotoloveu"><div class="image">
+<!-- Foto Akhir --><img src="https://i.postimg.cc/Rhzfr0FG/hbd.gif" id="animasi" width="130px" height="130px"/></div></div>
+
+<p class='catatan' id='koteks'>
+<marquee scrollamount="8" id="marq"><i id="spasi"></i>
+Yeay makasi ya :v<i id="spasi"></i>
+Kapan nih ditraktirinnya? &#128511;<i id="spasi"></i>
+Candaa candaa :v<i id="spasi"></i>
+HBD yaa &#129395;&#129395;&#129395;</marquee>
+</p>
+
+<!-- Tombol WA --><div id="tombWA"><a class='button' onClick='bukaWa();'>Kirim Pesan</a></div>
+
+</div>
+
+<script>
+function play() {//Link Audio Bisa Diganti
+var audio = new Audio('https://kuisberhadiah.likeadream.repl.co/musiktiktok.m4a');audio.play();audio.loop=true;audio.addEventListener('ended', function() {this.currentTime = 0;this.play();}, false);}         
+
+//Pesan WhatsApp
+ function bukaWa(){window.location = "https://api.whatsapp.com/send?phone=628975115906&text=" + window.nama + " udah liat semuanya. Enak aja lu minta traktir :v" + "%0A%0A" + "Btw makasih udah ngucapin ><";} 
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                backdrop: 'rgba(0,0,123,0.4)', confirmButtonColor: '#003EFF', cancelButtonColor: '#FF0040', allowOutsideClick: false,
+            });
+            async function mulai(){          	
+                await swals.fire({
+                    title: 'Hallo aisyah azzahra?',
+                    confirmButtonText: 'Lanjut',
+                    showCancelButton: false,
+                });                    
+                var nama = "Aisyah Azzahra"       
+                if(nama){
+                	play();
+                	window.nama = nama;
+                    await swals.fire('Hai, ' + nama + ' manis ツ');                    
+                    await swals.fire('Cie yang hari ini ultah &#128514;');
+                    await swals.fire('Selamat ulang tahun!');
+                    await swals.fire('Panjang umur & sehat selalu <3');
+                    pilihwarna();
+                //                                   
+                } else {
+                    await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');
+                    mulai();
+                }
+            }            
+            mulai();
+</script>
+<!-- Di bawah ini JANGAN DIEDIT SEMBARANGAN -->
+<script>
+  function tombol() {document.getElementById('tombWA').style.visibility = "visible";document.getElementById('tombWA').style.opacity = "1";}  
+  async function expl(){document.getElementById('bodyblur').style.opacity = "1";document.getElementById('bodyblur').style.visibility = "visible";setTimeout(duar,200);}
+  
+async function duar(){
+var e1 = document.getElementById('animasi');e1.classList.add("degdeg");
+document.getElementById('konten').style.top = "0";document.getElementById('fotoloveu').style.opacity = "1";document.getElementById('fotoloveu').style.height = "140px";document.getElementById('fotoloveu').style.margin = "50px 0 0 0";document.getElementById('koteks').style.opacity = "1";
+setTimeout(tombol,4000);setInterval(createHeart,200);
+document.body.style.backgroundColor = "#000";
+}
+
+const body = document.querySelector("body");
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "fas fa-heart";
+    heart.style.left = (Math.random() * 90)+"vw";
+    heart.style.animationDuration = (Math.random()*3)+2+"s"
+    body.appendChild(heart);
+}
+setInterval(function name(params) {
+    var heartArr = document.querySelectorAll(".fa-heart")
+    if (heartArr.length > 100) {
+       heartArr[0].remove()
+    }
+},100);
+
+function StartMarquee(){var marquee = document.getElementById ("marq");marquee.start();}
+function StopMarquee(){var marquee = document.getElementById ("marq");marquee.stop();}
+StopMarquee();
+
+async function pilihwarna(){
+  var { isConfirmed: warna } = await swals.fire({
+  title: 'Oh iya, ' + nama + ' mau pilih warna apa nih?',
+  text: 'Ayo, jangan ragu-ragu :v',
+  showCancelButton: true,
+  confirmButtonText: 'Biru',
+  cancelButtonText: 'Merah',
+});
+if(warna){
+    await swals.fire('Yeayy!', 'Kalo kamu pilih <b>Biru</b> berarti harus traktirin gw ya &#129315;!');
+    var { isConfirmed: warna2 } = await swals.fire({
+    title: nama + ' yakin pilih warna Biru?', 
+    text: 'Atau mau ganti warna aja nih?', showCancelButton: true,
+    confirmButtonText: 'Yakin',
+    cancelButtonText: 'Ganti',
+});
+if(warna2){
+    await swals.fire('Oke!', `Sekarang lihat ini ya &#10084;&#65039;`);
+    expl();StartMarquee();
+  } else {
+    await swals.fire('Oke, memilih Merah!', 'Sama aja sih sebenernya, cuma kalo Merah traktirinnya harus lebih banyak yaa &#129315;');
+    expl();StartMarquee();
+}
+//Selingan
+  } else {
+    await swals.fire('Yeayy!', 'Kalo kamu pilih <b>Merah</b> berarti harus traktirin gw ya &#129315;!');
+    var { isConfirmed: warna2 } = await swals.fire({
+    title: nama + ' yakin pilih warna Merah?', 
+    text: 'Atau mau ganti warna aja nih?', showCancelButton: true,
+    confirmButtonText: 'Ganti',
+    cancelButtonText: 'Yakin',
+});
+if(warna2){    
+    await swals.fire('Oke, memilih Biru!', 'Sama aja sih sebenernya, cuma kalo Biru traktirinnya harus lebih banyak yaa &#129315;');
+    expl();StartMarquee();
+  } else {
+    await swals.fire('Oke!', `Sekarang lihat ini ya &#10084;&#65039;`);
+    expl();StartMarquee();
+}
+}
+}
+</script>
+</body>
+</html>
